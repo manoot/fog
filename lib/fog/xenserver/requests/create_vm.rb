@@ -12,7 +12,7 @@ module Fog
           new_vm = Fog::Xenserver::Vm.new(get_vm( name_label ))
           create_vif( new_vm.reference, network.reference )
           
-          raise Fog::Xenserver::OperationFailed unless new_vm.allowed_operations.include?('provision')
+         # raise Fog::Xenserver::OperationFailed unless new_vm.allowed_operations.include?('provision')
           @connection.request({:parser => Fog::Parsers::Xenserver::Base.new, :method => 'VM.provision'}, new_vm.reference)
           start_vm( new_vm.reference )
           
