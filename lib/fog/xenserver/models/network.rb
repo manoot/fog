@@ -17,7 +17,7 @@ module Fog
       attribute :PIFs
       attribute :VIFs
       
-      ignore_attributes :allowed_operations, :blobs, :collection, :current_operations, :tags
+      ignore_attributes :allowed_operations, :blobs, :collection, :current_operations, :tags, :MTU
       
       def initialize(attributes={})
         @uuid ||= 0
