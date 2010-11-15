@@ -30,9 +30,7 @@ module Fog
               response = eval("@factory.call('#{method}', '#{@credentials}', #{params.map {|p|  p.is_a?(String) ? "'#{p}'" : p}.join(',')})")
             end
           end
-          
-          raise Fog::Xenserver::InvalidRequest unless response.first === ["Status", "Success"]
-          
+                    
           if parser
             parser.parse( response["Value"] )
             response = parser.response
