@@ -40,8 +40,9 @@ module Fog
                         :actions_after_crash, :actions_after_reboot, :actions_after_shutdown, :blobs,
                         :blocked_operations, :crash_dumps, :current_operations, :ha_always_run, :ha_restart_priority,
                         :last_boot_CPU_flags, :last_booted_record, :platform, :recommendations, :snapshot_time,
-                        :snapshots, :snapshot_of, :suspend_VDI, :tags, :transportable_snapshot_id, :user_version, 
-                        :xenstore_data
+                        :snapshots, :snapshot_of, :suspend_VDI, :tags, :transportable_snapshot_id, :user_version,
+                        :xenstore_data, :memory_overhead, :children, :bios_strings, :parent, :snapshot_metadata,
+                        :snapshot_info
 
       def initialize(attributes={})
         @uuid ||= 0
